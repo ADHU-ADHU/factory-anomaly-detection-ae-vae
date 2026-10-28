@@ -8,6 +8,12 @@ The completed thesis experiments compare convolutional **AEs and VAEs**, includi
 
 [Thesis: permanent record](https://urn.kb.se/resolve?urn=urn:nbn:se:his:diva-24446) · [Read the full thesis](https://his.diva-portal.org/smash/get/diva2:1891576/FULLTEXT01.pdf) · [Original notebooks](docs/notebook-index.md) · [Setup](docs/setup.md) · [Reported results](docs/thesis-results.md)
 
+## Problem: imbalanced inspection data
+
+Correct assemblies were much more common than faulty ones. Missing or misplaced valves and springs were rare, and deliberately creating enough fault examples would interrupt production and require rework. This left too few representative fault images for a balanced, supervised classification dataset.
+
+That imbalance motivated the **AE/VAE anomaly-detection approach**: learn the appearance or latent distribution of a chosen normal assembly class, then score deviations from it. Normal-only training reduces dependence on a large, balanced collection of examples for every possible fault. Representative normal data and a separate evaluation set are still needed.
+
 ## Research approach
 
 Train an encoder-decoder on normal images, then inspect either reconstruction differences or the distribution of latent representations. A selected component class is the inlier class; other component classes and assembly-error examples form the anomaly cases.
@@ -46,6 +52,8 @@ The research configuration uses **400 × 320 RGB images** and a **512-dimensiona
 
 These are selected **historical thesis results**, from Tables 2, 5 and 6, rather than newly reproduced measurements. Anomalies include other component classes; best F1 was chosen through threshold sweeps. The scores do not establish general production defect-detection accuracy. See [result context and source pages](docs/thesis-results.md).
 
+For the complete tables, timing comparison, precision–recall curves and score-distribution boxplots, use the [results page guide](docs/thesis-results.md#where-to-find-all-results), or open the [full results chapter, printed pp. 38–47](https://his.diva-portal.org/smash/get/diva2:1891576/FULLTEXT01.pdf#page=39).
+
 [![Published latent-space comparison: VAE and AE](docs/assets/thesis-convergence-or-latent.png)](docs/assets/thesis-convergence-or-latent.png)
 
 *Published thesis Figure 8: a t-SNE visualization of VAE and AE representations. It illustrates the recorded experiment; t-SNE separation alone is not a quantitative performance guarantee.*
@@ -73,7 +81,13 @@ factory-anomaly evaluate \
 
 Use `--model ae` for the ordinary autoencoder. Reconstruction scoring supports `--method mse` or `ssim`; latent scoring supports `mahalanobis` or `gmm`. For transfer learning, explicitly select, for example, `--backbone mobilenetv2 --weights imagenet`; this downloads ImageNet weights. The default CNN is trained from scratch and performs no weight download.
 
-The industrial dataset and trained checkpoints are not distributed. Use your own authorized images in this layout:
+### Data ownership and your own classes
+
+The industrial images used in this research **belong to Aurobay** and were provided under a confidentiality agreement. They are excluded from this repository, along with embedded notebook image previews and trained checkpoints. The result charts shown here come from the publicly available thesis and are attributed to it.
+
+You can use **your own image classes**. Choose what counts as normal for your application, place those images in the normal splits, and use your fault or other-class images for held-out anomaly evaluation. The portable code uses `normal` and `anomaly` as folder roles; it does not depend on Aurobay's valve-class names.
+
+For example, correctly assembled parts can be your normal class, with missing-component and wrong-orientation images in subfolders under `test/anomaly/`. Use this layout:
 
 ```text
 images/

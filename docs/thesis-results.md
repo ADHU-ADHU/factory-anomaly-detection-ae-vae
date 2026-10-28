@@ -6,9 +6,26 @@ The original research is documented in **Artificial Intelligence for Factory Aut
 
 ## Research question
 
+The motivating problem was **class imbalance**: correctly assembled examples were common, while faulty assemblies were scarce. Deliberately creating missing/misplaced-component cases would disrupt production and require rework. Learning a normal class with an AE or VAE offered a way to score unusual assemblies without requiring a balanced set of labeled examples for each fault class. This motivation is described in section 1.1, printed pp. 9–10 of the thesis.
+
 Can models trained on normal valve and spring assembly images identify unexpected assemblies when fault examples are scarce? The study compared convolutional autoencoders (AEs) and variational autoencoders (VAEs), using either a custom CNN encoder or ImageNet features from MobileNetV2 and InceptionResNetV2. The decoder was kept consistent to study the effect of the encoder and anomaly score.
 
 The principal experiments used RGB images of 400 × 320 pixels and a 512-dimensional latent representation. AE training minimized reconstruction MSE. VAE training combined a reconstruction term with KL divergence. Experiments included reconstruction scores, Mahalanobis distance, Gaussian mixture models (GMM), kernel density estimation and one-class SVM. GAN-based approaches were reviewed and explored in additional notebooks; they were not part of the thesis's main quantitative comparison.
+
+## Where to find all results
+
+The repository shows selected results and published charts. The complete discussion and tables remain in the [full thesis results chapter, printed pp. 38–47](https://his.diva-portal.org/smash/get/diva2:1891576/FULLTEXT01.pdf#page=39).
+
+| Material | Printed thesis page(s) | Open in the PDF |
+| --- | --- | --- |
+| AE experiments, reconstruction metrics and timing | 38–41 | [AE results](https://his.diva-portal.org/smash/get/diva2:1891576/FULLTEXT01.pdf#page=39) |
+| Training and inference timing comparison, Table 4 | 41 | [Timing table](https://his.diva-portal.org/smash/get/diva2:1891576/FULLTEXT01.pdf#page=42) |
+| VAE analysis and latent-space scoring | 41–47 | [VAE results](https://his.diva-portal.org/smash/get/diva2:1891576/FULLTEXT01.pdf#page=42) |
+| t-SNE and precision–recall comparisons, Figures 8–9 | 43 | [Latent and PR figures](https://his.diva-portal.org/smash/get/diva2:1891576/FULLTEXT01.pdf#page=44) |
+| Score-distribution boxplots, Figure 10 | 44 | [Boxplots](https://his.diva-portal.org/smash/get/diva2:1891576/FULLTEXT01.pdf#page=45) |
+| Detailed VAE metric tables, Tables 5–6 | 44–47 | [VAE tables](https://his.diva-portal.org/smash/get/diva2:1891576/FULLTEXT01.pdf#page=45) |
+
+The links use PDF viewer page numbers, which are one greater than the printed page labels. The thesis's published figures can be viewed in context through these links; private source images and notebook previews are not redistributed.
 
 ## Selected historical configurations
 
@@ -35,6 +52,12 @@ Results depend on the normal class and scoring method. The pretrained VAE with M
 
 **Source:** Figure 8, printed p. 43 of the [published thesis](https://his.diva-portal.org/smash/get/diva2:1891576/FULLTEXT01.pdf#page=44). Left: VAE; right: AE. Both use InceptionResNetV2 encoders and outlet-valve training images. This is a crop of the publicly published chart, not a new model run. The t-SNE axes are a visualization of latent features; distances between projected clusters do not independently validate detection performance.
 
+## Published score-distribution boxplots
+
+![Published thesis Figure 10: VAE Mahalanobis, AE MSE and VAE GMM score distributions](assets/thesis-score-distributions.png)
+
+**Source:** Figure 10, printed p. 44 of the [published thesis](https://his.diva-portal.org/smash/get/diva2:1891576/FULLTEXT01.pdf#page=45). Panels show **(a) VAE Mahalanobis distance**, **(b) AE reconstruction MSE**, and **(c) VAE GMM scores**, with InceptionResNetV2 encoders trained on the outlet class. This is the original published chart, not a newly computed result or a raw industrial image. Score scales and category ordering differ between panels; compare class distributions within each panel rather than absolute heights across methods.
+
 ## Reading the results in context
 
 - **Small industrial dataset:** Table 1, p. 32 reports 459 outlet images, 138 inlet Type-1 images, 211 inlet Type-2 images and only 7 misplaced/missing examples. The study states an 80:20 training/testing split. Individual archived notebooks contain evolving experiments and should not be assumed to reproduce that exact split automatically.
@@ -42,7 +65,7 @@ Results depend on the normal class and scoring method. The pretrained VAE with M
 - **Threshold sensitivity:** changing reconstruction or latent-space scores substantially changed results. Thresholds for a new dataset should be selected using a dedicated validation set, then evaluated once on held-out test data.
 - **Limited tuning:** the thesis discusses limited normal data, overfitting, decoder cropping, latent-size and learning-rate choices, VAE loss balancing, and untuned GMM/KDE parameters (section 5.3, p. 47).
 - **Research archive and maintained adapter:** the portable TensorFlow package preserves the default architecture geometry while making data paths and configuration explicit. Its deterministic VAE inspection uses the posterior mean. Historical notebooks also explored log-variance features and other scoring choices. Changing that representation can change results.
-- **Data access:** the industrial image dataset was covered by a confidentiality agreement, as described in section 7.2, p. 51. Raw images, embedded notebook outputs and trained weights are excluded from this repository. The thesis remains available through its public record.
+- **Data access and ownership:** the industrial images belong to Aurobay and were provided under a confidentiality agreement, as described in section 7.2, p. 51. Raw images, embedded notebook outputs and trained weights are excluded from this repository. Published result charts are attributed to the publicly available thesis. The portable code can be used with your own normal and anomaly classes; see [data preparation](setup.md#prepare-data).
 
 ## Architecture drawings
 

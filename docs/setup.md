@@ -15,6 +15,8 @@ On Windows, activate with `.venv\Scripts\activate`. To inspect the archived note
 
 ## Prepare data
 
+The thesis's industrial images belong to **Aurobay** and are not bundled. Supply your own authorized images; the original valve and spring class names are not required by the portable implementation.
+
 Keep one chosen inlier class under each `normal` directory. Use distinct images for training, validation, calibration and test. Supported formats are BMP, PNG and JPEG; subdirectories are searched recursively. Every image is decoded as RGB, resized to the configured height/width and divided by 255.
 
 ```text
@@ -25,6 +27,10 @@ your-data/
   test/normal/
   test/anomaly/
 ```
+
+The folder names describe roles, so your underlying class names can be different. For example, put `assembled_correctly` images under `train/normal/assembled_correctly/` and the corresponding normal validation/calibration/test directories. Put held-out `missing_component` and `wrong_orientation` images under `test/anomaly/missing_component/` and `test/anomaly/wrong_orientation/`. Recursive loading pools all normal subfolders into label 0 and all anomaly subfolders into label 1. Train a separate run for each chosen normal-class definition when comparing different products or assembly types.
+
+Training uses normal examples only, which is the reason for choosing this anomaly-detection formulation when labeled fault classes are scarce or imbalanced. It does not require balancing normal and fault counts in the training folders. Keep test data representative of the intended evaluation, and report its class composition alongside the metrics.
 
 Train uses only the first two directories. Evaluation additionally needs the calibration and both test classes; latent methods refit a normal distribution from `train/normal`. No labels from the test set select the threshold. Split by underlying part/capture session where appropriate, and keep augmented copies of one source image within the same split.
 
