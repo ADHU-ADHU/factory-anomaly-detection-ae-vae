@@ -1,0 +1,524 @@
+{
+  "format_version": 1,
+  "generator": "tools/prepare_notebooks.py",
+  "scope": "Historical, sanitized notebook source; no notebook code was executed.",
+  "sanitization": [
+    "Remove all saved outputs and execution counts.",
+    "Remove attachments and arbitrary notebook/cell metadata; use a Python 3 kernel.",
+    "Replace absolute Windows paths and individual private-image filenames with placeholders.",
+    "Preserve notebook filenames, source logic, relative model names and upstream attribution."
+  ],
+  "notebooks": [
+    {
+      "filename": "alltogether_new_test_Variational_Autoencoders_.ipynb",
+      "path": "variational_autoencoders/alltogether_new_test_Variational_Autoencoders_.ipynb",
+      "category": "variational_autoencoders",
+      "status": "historical_research",
+      "original_sha256": "d02b3ab69fbe1043dc3eb54172e9ddc241c973eb2145cb1ba97a69901480b172",
+      "sanitized_sha256": "bdad9d7f574436b6a5b80de1e0327e2bb32077fd69ac9a53ed50e9a9fa21ba22",
+      "paths_redacted": 6,
+      "code_validation": {
+        "ast_parsed_cells": 68,
+        "ipython_cells_skipped": [],
+        "syntax_errors": []
+      }
+    },
+    {
+      "filename": "EPOCHchangevae.ipynb",
+      "path": "variational_autoencoders/EPOCHchangevae.ipynb",
+      "category": "variational_autoencoders",
+      "status": "historical_research",
+      "original_sha256": "8fe6cfb9a30b75621f4af8dc18fd333ad046e0f45fa84a6c7d8379e630585b50",
+      "sanitized_sha256": "2829a66f9b5b69d620ee6795e81d1aa6a1272e5f2167815a1c272c02b7e28eef",
+      "paths_redacted": 4,
+      "code_validation": {
+        "ast_parsed_cells": 88,
+        "ipython_cells_skipped": [],
+        "syntax_errors": []
+      }
+    },
+    {
+      "filename": "exception.ipynb",
+      "path": "experiments/exception.ipynb",
+      "category": "experiments",
+      "status": "unfinished_prototype",
+      "original_sha256": "676110c9bbd6882bae9b8ff67ab79d0090e734e403618450854d7e17babbf3f5",
+      "sanitized_sha256": "b83b2809844f1c1fdefc00f0f98a269c7f4972cfabc9495d47ed80f73e94189e",
+      "paths_redacted": 10,
+      "code_validation": {
+        "ast_parsed_cells": 56,
+        "ipython_cells_skipped": [],
+        "syntax_errors": []
+      }
+    },
+    {
+      "filename": "GAN_anomaly detection.ipynb",
+      "path": "experiments/GAN_anomaly detection.ipynb",
+      "category": "experiments",
+      "status": "unfinished_prototype",
+      "original_sha256": "51478698c18e67b6351d596d1b55f62b1cd3ee1b4e030fced6b920465a9ad5df",
+      "sanitized_sha256": "eb9f3849a4e16d7b9966fd53d3a67e71adc19122c9a4e2c9aeb0c273b29e3705",
+      "paths_redacted": 0,
+      "code_validation": {
+        "ast_parsed_cells": 6,
+        "ipython_cells_skipped": [],
+        "syntax_errors": []
+      }
+    },
+    {
+      "filename": "ganomaly_ten.ipynb",
+      "path": "experiments/ganomaly_ten.ipynb",
+      "category": "experiments",
+      "status": "external_launcher",
+      "original_sha256": "51a3f162af3b9ebcf0ca4767db6e80507a2628c2e1998e4604b2445f3023d87a",
+      "sanitized_sha256": "806cc3972ec121f8d7e2752f661f1fab60cf117c2ade476827a62c9530dbf160",
+      "paths_redacted": 1,
+      "code_validation": {
+        "ast_parsed_cells": 2,
+        "ipython_cells_skipped": [
+          1,
+          2,
+          3
+        ],
+        "syntax_errors": []
+      }
+    },
+    {
+      "filename": "graphforvae_inlet5.ipynb",
+      "path": "variational_autoencoders/graphforvae_inlet5.ipynb",
+      "category": "variational_autoencoders",
+      "status": "historical_research",
+      "original_sha256": "73a372a714446af468872d33c19509051e11899cce87b788086be9710c124bd5",
+      "sanitized_sha256": "74f0af7c939d6120bb2383e42ddc763b5eed13ddc75e97c9bdb1561eb80225dd",
+      "paths_redacted": 4,
+      "code_validation": {
+        "ast_parsed_cells": 114,
+        "ipython_cells_skipped": [],
+        "syntax_errors": []
+      }
+    },
+    {
+      "filename": "Inlet_3_Left.ipynb",
+      "path": "autoencoders/Inlet_3_Left.ipynb",
+      "category": "autoencoders",
+      "status": "historical_research",
+      "original_sha256": "f73d515190e4db6519bd8a9413453c0f474d789487b7b0c8e6fecca9d88e7a52",
+      "sanitized_sha256": "2eb2a9ec1566edd058767eb97f6da1986b704ed38361979dba3d066a69fbcc81",
+      "paths_redacted": 7,
+      "code_validation": {
+        "ast_parsed_cells": 20,
+        "ipython_cells_skipped": [],
+        "syntax_errors": []
+      }
+    },
+    {
+      "filename": "Inlet_3_right.ipynb",
+      "path": "autoencoders/Inlet_3_right.ipynb",
+      "category": "autoencoders",
+      "status": "historical_research",
+      "original_sha256": "f1c7fc3d90d7f7f7989a5d1e2a9073b349486ca16e33988bb0e3ce74dabd940a",
+      "sanitized_sha256": "1a4330efd4392ae76129d8895a8496f567fba6355ba735d9167887e1c785cd5b",
+      "paths_redacted": 7,
+      "code_validation": {
+        "ast_parsed_cells": 21,
+        "ipython_cells_skipped": [],
+        "syntax_errors": []
+      }
+    },
+    {
+      "filename": "Inlet_5_Left.ipynb",
+      "path": "autoencoders/Inlet_5_Left.ipynb",
+      "category": "autoencoders",
+      "status": "historical_research",
+      "original_sha256": "53dd23d965b0bfb783b666d346811fbcdc159079867922ed824f77af04f364ce",
+      "sanitized_sha256": "4a79c95b16cfc4808ee7b0f5eb00798cac2a0edd7a5c314b5600bb383af5d60c",
+      "paths_redacted": 9,
+      "code_validation": {
+        "ast_parsed_cells": 44,
+        "ipython_cells_skipped": [],
+        "syntax_errors": []
+      }
+    },
+    {
+      "filename": "Inlet_5_Left_epoch50.ipynb",
+      "path": "autoencoders/Inlet_5_Left_epoch50.ipynb",
+      "category": "autoencoders",
+      "status": "historical_research",
+      "original_sha256": "9d3d1789305be9ea994d3575d9fe63a0a30256379067443a0f0ab567d6796206",
+      "sanitized_sha256": "b55e8faa13be282ab65ce4ab92fff4bef17508b42f6a0e61650da5ba27d804ce",
+      "paths_redacted": 9,
+      "code_validation": {
+        "ast_parsed_cells": 44,
+        "ipython_cells_skipped": [],
+        "syntax_errors": []
+      }
+    },
+    {
+      "filename": "Inlet_5_Right.ipynb",
+      "path": "autoencoders/Inlet_5_Right.ipynb",
+      "category": "autoencoders",
+      "status": "historical_research",
+      "original_sha256": "c5fa1c6acc61fb8dc22828c242997eb658c9eee20284cfc10e1791ebea9cf3d0",
+      "sanitized_sha256": "c4951cc57efb3eb9b23ac91070720d18ae130748b9baab364b50d8a76a6ad807",
+      "paths_redacted": 7,
+      "code_validation": {
+        "ast_parsed_cells": 21,
+        "ipython_cells_skipped": [],
+        "syntax_errors": []
+      }
+    },
+    {
+      "filename": "New_VAE.ipynb",
+      "path": "variational_autoencoders/New_VAE.ipynb",
+      "category": "variational_autoencoders",
+      "status": "historical_research",
+      "original_sha256": "b6d00784ef4f4c40c3a61fc95ad96180fb6b56c19a59cea0308f7385d77a9809",
+      "sanitized_sha256": "23caa51855d93b289b7009b5cfd41970501055373fcb6ef1dd6350c0b04662b2",
+      "paths_redacted": 2,
+      "code_validation": {
+        "ast_parsed_cells": 18,
+        "ipython_cells_skipped": [],
+        "syntax_errors": []
+      }
+    },
+    {
+      "filename": "newtestvae.ipynb",
+      "path": "variational_autoencoders/newtestvae.ipynb",
+      "category": "variational_autoencoders",
+      "status": "historical_research",
+      "original_sha256": "a1a1e73eb4c810341a1fe2b1841c905c5256a421b9f58906cc751d16d2ddd83e",
+      "sanitized_sha256": "9fc9e0097cb44e0e5e619840db1023cfabcabec3066d8fb2334cd3aac05e2e9d",
+      "paths_redacted": 0,
+      "code_validation": {
+        "ast_parsed_cells": 3,
+        "ipython_cells_skipped": [],
+        "syntax_errors": []
+      }
+    },
+    {
+      "filename": "Outlet_inceptionresnet_left_Variational_Autoencoders_.ipynb",
+      "path": "variational_autoencoders/Outlet_inceptionresnet_left_Variational_Autoencoders_.ipynb",
+      "category": "variational_autoencoders",
+      "status": "historical_research",
+      "original_sha256": "3a340fdc3a5ffb27e9dadea16f4258adea6eb1aac45315eb2e51794bfdabf683",
+      "sanitized_sha256": "bc15297ffd2f581e6004720dfd25961287ea1ab40765f158f84a55d360d74cd0",
+      "paths_redacted": 4,
+      "code_validation": {
+        "ast_parsed_cells": 75,
+        "ipython_cells_skipped": [],
+        "syntax_errors": []
+      }
+    },
+    {
+      "filename": "Outlet_Left.ipynb",
+      "path": "autoencoders/Outlet_Left.ipynb",
+      "category": "autoencoders",
+      "status": "historical_research",
+      "original_sha256": "222fb8137012011e586ce3b4176e7dbd7aea331be574eb90963acb8963fb18b1",
+      "sanitized_sha256": "3ac8f405c5479464d88ae2440894399c1622ae4a05fb4e7a2195db8da1689e00",
+      "paths_redacted": 10,
+      "code_validation": {
+        "ast_parsed_cells": 47,
+        "ipython_cells_skipped": [],
+        "syntax_errors": []
+      }
+    },
+    {
+      "filename": "Outlet_left_Variational_Autoencoders_Implementation.ipynb",
+      "path": "variational_autoencoders/Outlet_left_Variational_Autoencoders_Implementation.ipynb",
+      "category": "variational_autoencoders",
+      "status": "historical_research",
+      "original_sha256": "168558da597b81a11711e5dd223e47e83c2cc156db0f5c9658014ceeb1330696",
+      "sanitized_sha256": "4ee03f53d5154df2c25362b7eebba03a5bd79a8f62e1d1435f735c5bf215ace2",
+      "paths_redacted": 6,
+      "code_validation": {
+        "ast_parsed_cells": 70,
+        "ipython_cells_skipped": [],
+        "syntax_errors": []
+      }
+    },
+    {
+      "filename": "Outlet_right.ipynb",
+      "path": "autoencoders/Outlet_right.ipynb",
+      "category": "autoencoders",
+      "status": "historical_research",
+      "original_sha256": "bf3043ed458a3160f18d6f660dfa637e9164031bd1d76c4ab9ec5a3e95ad4b87",
+      "sanitized_sha256": "a148a13328712b0fb5ff218b9474c10dad35529df63bd835d78d3e2f94906ad4",
+      "paths_redacted": 7,
+      "code_validation": {
+        "ast_parsed_cells": 20,
+        "ipython_cells_skipped": [],
+        "syntax_errors": []
+      }
+    },
+    {
+      "filename": "patchCNN_test.ipynb",
+      "path": "experiments/patchCNN_test.ipynb",
+      "category": "experiments",
+      "status": "unfinished_prototype",
+      "original_sha256": "ca0da8bab8ca425dc9c5a55d6c74e6d471ec7b24a65e70de582a8eb4d995de5a",
+      "sanitized_sha256": "e1785b3e6ebc24fcced1ee8bffc27d5716255f6337b343a1a17a6de4ebb2466d",
+      "paths_redacted": 7,
+      "code_validation": {
+        "ast_parsed_cells": 25,
+        "ipython_cells_skipped": [],
+        "syntax_errors": []
+      }
+    },
+    {
+      "filename": "Pretrained_featrue_extraction.ipynb",
+      "path": "experiments/Pretrained_featrue_extraction.ipynb",
+      "category": "experiments",
+      "status": "unfinished_prototype",
+      "original_sha256": "4b7c10ee997ad6254aff07179478be4426f7b80a3958c25be92bb55a946579b3",
+      "sanitized_sha256": "f098dd6a8295e7af4503ed026da9dc454f6204267d0d2e6126427fb57f824dd6",
+      "paths_redacted": 3,
+      "code_validation": {
+        "ast_parsed_cells": 15,
+        "ipython_cells_skipped": [],
+        "syntax_errors": []
+      }
+    },
+    {
+      "filename": "Pretrained_in5_left_forgraph.ipynb",
+      "path": "autoencoders/Pretrained_in5_left_forgraph.ipynb",
+      "category": "autoencoders",
+      "status": "historical_research",
+      "original_sha256": "3597b3c954580f1e7810a7fd15e112b58f6b54e86b47f439c13e952a1b67270c",
+      "sanitized_sha256": "caad87138f3899d92bd9e922d9ec46dc27c04fefa045cb2f5991b74c7cec4a31",
+      "paths_redacted": 12,
+      "code_validation": {
+        "ast_parsed_cells": 61,
+        "ipython_cells_skipped": [],
+        "syntax_errors": []
+      }
+    },
+    {
+      "filename": "Pretrained_in5_left_Inception.ipynb",
+      "path": "autoencoders/Pretrained_in5_left_Inception.ipynb",
+      "category": "autoencoders",
+      "status": "historical_research",
+      "original_sha256": "2430c968cd93369eaca7e6dd7a0d15d1925fe9389f4fbd1c4bc702876013a9bd",
+      "sanitized_sha256": "3466c8682173540aa3b784676616e280e9c11bda727ad014d8eae6eab2a680c3",
+      "paths_redacted": 9,
+      "code_validation": {
+        "ast_parsed_cells": 46,
+        "ipython_cells_skipped": [],
+        "syntax_errors": []
+      }
+    },
+    {
+      "filename": "Pretrained_in5_left_InceptionResNetV2.ipynb",
+      "path": "autoencoders/Pretrained_in5_left_InceptionResNetV2.ipynb",
+      "category": "autoencoders",
+      "status": "historical_research",
+      "original_sha256": "ff850ae330a5ddc3549b32e9366ae5fe01ac7780e4b2cd0e69026a30cd34e8d8",
+      "sanitized_sha256": "2ec94515897b00dfe06c8f6c3c0c9ed06c496cd2d1d0e690c554c86d39f1fdd9",
+      "paths_redacted": 9,
+      "code_validation": {
+        "ast_parsed_cells": 53,
+        "ipython_cells_skipped": [],
+        "syntax_errors": []
+      }
+    },
+    {
+      "filename": "Pretrained_in5_left_InceptionResNetV2150epoc.ipynb",
+      "path": "autoencoders/Pretrained_in5_left_InceptionResNetV2150epoc.ipynb",
+      "category": "autoencoders",
+      "status": "historical_research",
+      "original_sha256": "68df5740cab92ef8a631fc0c8d4799f09da8c23269db2e766e40ec195aa9c84e",
+      "sanitized_sha256": "5871fdeb768baea2ddc0c8322073214ba9484be8b49704679fea3f8c824fa388",
+      "paths_redacted": 9,
+      "code_validation": {
+        "ast_parsed_cells": 53,
+        "ipython_cells_skipped": [],
+        "syntax_errors": []
+      }
+    },
+    {
+      "filename": "Pretrained_in5_left_Mobilenet_50epoc.ipynb",
+      "path": "autoencoders/Pretrained_in5_left_Mobilenet_50epoc.ipynb",
+      "category": "autoencoders",
+      "status": "historical_research",
+      "original_sha256": "87b815f8e12e850690408de5a5ee0ddfe3d22912e481cd12d7874313c738a67e",
+      "sanitized_sha256": "73bbcb6cd8be80948d05808c9f5e259cc4c2b0f52c80c76448dbf7ff56209d60",
+      "paths_redacted": 9,
+      "code_validation": {
+        "ast_parsed_cells": 54,
+        "ipython_cells_skipped": [],
+        "syntax_errors": []
+      }
+    },
+    {
+      "filename": "Pretrained_in5_left_Resnet50.ipynb",
+      "path": "autoencoders/Pretrained_in5_left_Resnet50.ipynb",
+      "category": "autoencoders",
+      "status": "historical_research",
+      "original_sha256": "8c0e60748ff922cafd1df5d5263634532549c6641ba0f4e3fc2d795cab234b35",
+      "sanitized_sha256": "2d782849a68c8919257e41f1c4ae2ef54aae68d82b772cfd057167339bbb2ae7",
+      "paths_redacted": 9,
+      "code_validation": {
+        "ast_parsed_cells": 44,
+        "ipython_cells_skipped": [],
+        "syntax_errors": []
+      }
+    },
+    {
+      "filename": "Pretrained_model_autoencoder.ipynb",
+      "path": "experiments/Pretrained_model_autoencoder.ipynb",
+      "category": "experiments",
+      "status": "unfinished_prototype",
+      "original_sha256": "fd301ccef1de47febc22d20afb314affaac0854e699919503345052a06b5492b",
+      "sanitized_sha256": "63fa5cd4cab6da785d164929560fc33e3d9e71c0762a42f1bbea51e13abf17d1",
+      "paths_redacted": 2,
+      "code_validation": {
+        "ast_parsed_cells": 9,
+        "ipython_cells_skipped": [],
+        "syntax_errors": []
+      }
+    },
+    {
+      "filename": "Pretrained_outlet_left_forgraph.ipynb",
+      "path": "autoencoders/Pretrained_outlet_left_forgraph.ipynb",
+      "category": "autoencoders",
+      "status": "historical_research",
+      "original_sha256": "0d28475e654b4c31d870e2a56033818b96874aff86c1ef2cecdef7f0fd4fb00e",
+      "sanitized_sha256": "939c4f4c74cd0cf9bf80a2d4688f611a909577aef241d7fdc280fb212468017c",
+      "paths_redacted": 11,
+      "code_validation": {
+        "ast_parsed_cells": 58,
+        "ipython_cells_skipped": [],
+        "syntax_errors": []
+      }
+    },
+    {
+      "filename": "Pretrained_outlet_left_InceptionResNetV2.ipynb",
+      "path": "autoencoders/Pretrained_outlet_left_InceptionResNetV2.ipynb",
+      "category": "autoencoders",
+      "status": "historical_research",
+      "original_sha256": "ada4ff1543ed1281b31faae1c19c23f06fb86d20286c797cb47287aae55e56ad",
+      "sanitized_sha256": "78a1310e53b54e85aed94d0a8444a5eead80d960b8763f1ac6d00f51c08e2876",
+      "paths_redacted": 11,
+      "code_validation": {
+        "ast_parsed_cells": 56,
+        "ipython_cells_skipped": [],
+        "syntax_errors": []
+      }
+    },
+    {
+      "filename": "Pretrained_Outlet_left_Mobilenet.ipynb",
+      "path": "autoencoders/Pretrained_Outlet_left_Mobilenet.ipynb",
+      "category": "autoencoders",
+      "status": "historical_research",
+      "original_sha256": "4a58fd48721ba3435ae39babd147f13efbb6aea1ec7ed249c69bd87f43a228ff",
+      "sanitized_sha256": "5663aa913d2c61692cc2870ef08f2af87311828bcf8c6bb41ffbd6fefb6d9169",
+      "paths_redacted": 9,
+      "code_validation": {
+        "ast_parsed_cells": 51,
+        "ipython_cells_skipped": [],
+        "syntax_errors": []
+      }
+    },
+    {
+      "filename": "Pretrained_Outlet_left_Resnet50.ipynb",
+      "path": "autoencoders/Pretrained_Outlet_left_Resnet50.ipynb",
+      "category": "autoencoders",
+      "status": "historical_research",
+      "original_sha256": "fab8574a4861bf799b89df3b7d13326305228aec4224cc34bf9101f3b1619dd6",
+      "sanitized_sha256": "965fbf2f9d5ae19a625e6b0366689fd3cfa0c096a4af64bfefb86cc54962ee16",
+      "paths_redacted": 9,
+      "code_validation": {
+        "ast_parsed_cells": 49,
+        "ipython_cells_skipped": [],
+        "syntax_errors": []
+      }
+    },
+    {
+      "filename": "PYtorch.ipynb",
+      "path": "experiments/PYtorch.ipynb",
+      "category": "experiments",
+      "status": "unfinished_prototype",
+      "original_sha256": "0d666bf08b130fa116a1250b32c2e8f374c9a52ae93d7729b3eafec2f915b737",
+      "sanitized_sha256": "91498f62d12ece0d48d7b91635a2d72dd7e5989405bbf46f5edd1b07314d6831",
+      "paths_redacted": 0,
+      "code_validation": {
+        "ast_parsed_cells": 6,
+        "ipython_cells_skipped": [],
+        "syntax_errors": []
+      }
+    },
+    {
+      "filename": "pytorchanomalib_GANomaly.ipynb",
+      "path": "experiments/pytorchanomalib_GANomaly.ipynb",
+      "category": "experiments",
+      "status": "experimental_separate_stack",
+      "original_sha256": "03ee7eaf071e799c81171e9830f1f5b79871baa425e86fcb95135fdc4c0ea06b",
+      "sanitized_sha256": "5cdd8049d022683a976c4c204ec00ee86c082e0a3acb0537e18d74bce9125456",
+      "paths_redacted": 6,
+      "code_validation": {
+        "ast_parsed_cells": 29,
+        "ipython_cells_skipped": [
+          25
+        ],
+        "syntax_errors": []
+      }
+    },
+    {
+      "filename": "tensorflow_webgan.ipynb",
+      "path": "experiments/tensorflow_webgan.ipynb",
+      "category": "experiments",
+      "status": "unfinished_prototype",
+      "original_sha256": "58df1c143812b996f42df91b9886efbb0d1efe7c748865fad4405e665055ca9e",
+      "sanitized_sha256": "30b1b8e22069cb0b9cf7ddf6c26f297c6cbd5df2210f55c17ef27a94ef701ddf",
+      "paths_redacted": 8,
+      "code_validation": {
+        "ast_parsed_cells": 49,
+        "ipython_cells_skipped": [],
+        "syntax_errors": []
+      }
+    },
+    {
+      "filename": "VAE.ipynb",
+      "path": "variational_autoencoders/VAE.ipynb",
+      "category": "variational_autoencoders",
+      "status": "historical_research",
+      "original_sha256": "dad17df7e529fa2db956ec843b839c4f9028a1bd56ddf3fb60fcb71c52e82d38",
+      "sanitized_sha256": "7d21517b8912370b7a8cdb30c39ba29f7dc7172251e010bc47d2d2f32070b315",
+      "paths_redacted": 3,
+      "code_validation": {
+        "ast_parsed_cells": 18,
+        "ipython_cells_skipped": [],
+        "syntax_errors": []
+      }
+    },
+    {
+      "filename": "VAE_in5_left_inceptionresnet.ipynb",
+      "path": "variational_autoencoders/VAE_in5_left_inceptionresnet.ipynb",
+      "category": "variational_autoencoders",
+      "status": "historical_research",
+      "original_sha256": "6a79cdbf1b1724f0beb0b453f099dc9b44da7346f8b53e067a263ceeae7f6db3",
+      "sanitized_sha256": "58602894afaee1b88fbb723932983cac255b0f7c95fcb815292ac0597039acdd",
+      "paths_redacted": 4,
+      "code_validation": {
+        "ast_parsed_cells": 58,
+        "ipython_cells_skipped": [],
+        "syntax_errors": []
+      }
+    },
+    {
+      "filename": "working_Variational_Autoencoders_Implementation.ipynb",
+      "path": "variational_autoencoders/working_Variational_Autoencoders_Implementation.ipynb",
+      "category": "variational_autoencoders",
+      "status": "historical_research",
+      "original_sha256": "676dfab1f82d17c069495511db95f26a312266a9823d7fbdd71b8cea64df2c97",
+      "sanitized_sha256": "476f39f8a973a32858e32560f732d17d79a87ac025fa2c261eb164fcd9b9509d",
+      "paths_redacted": 4,
+      "code_validation": {
+        "ast_parsed_cells": 48,
+        "ipython_cells_skipped": [],
+        "syntax_errors": []
+      }
+    }
+  ],
+  "count": 36
+}
